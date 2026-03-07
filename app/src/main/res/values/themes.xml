@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.ArteyDecoraciones" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/brown_600</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/brown_100</item>
+        <item name="colorOnPrimaryContainer">@color/brown_900</item>
+        <item name="colorSecondary">@color/amber_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/amber_100</item>
+        <item name="colorOnSecondaryContainer">@color/brown_900</item>
+        <item name="android:colorBackground">@color/cream</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/brown_900</item>
+        <item name="colorError">@color/error_red</item>
+    </style>
+
+    <style name="Theme.ArteyDecoraciones" parent="Base.Theme.ArteyDecoraciones" />
+
+    <style name="StatusChip.Created" parent="Widget.Material3.Chip.Suggestion">
+        <item name="chipBackgroundColor">@color/status_created</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_envio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="🚚"
+            android:textSize="28sp"
+            android:layout_marginEnd="12dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_envio_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Envío #0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/brown_900" />
+
+            <TextView
+                android:id="@+id/tv_envio_pedido_ref"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pedido #0"
+                android:textSize="12sp"
+                android:textColor="@color/brown_300"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/tv_envio_direccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dirección"
+                android:textSize="12sp"
+                android:textColor="@color/brown_500"
+                android:layout_marginTop="2dp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_envio_tracking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tracking: N/A"
+                android:textSize="12sp"
+                android:textColor="@color/brown_300"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_envio_estado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PENDIENTE"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/status_pending" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Arte y Decoraciones - Paleta Cálida Elegante -->
+    <color name="brown_900">#3E2723</color>
+    <color name="brown_700">#5D4037</color>
+    <color name="brown_600">#6D4C41</color>
+    <color name="brown_500">#795548</color>
+    <color name="brown_300">#A1887F</color>
+    <color name="brown_100">#D7CCC8</color>
+    <color name="brown_50">#EFEBE9</color>
+
+    <color name="amber_700">#FF8F00</color>
+    <color name="amber_500">#FFC107</color>
+    <color name="amber_100">#FFF8E1</color>
+
+    <color name="cream">#FFF8F0</color>
+    <color name="cream_dark">#FFF3E0</color>
+
+    <!-- Estados de pedido y envío -->
+    <color name="status_created">#1565C0</color>
+    <color name="status_processing">#E65100</color>
+    <color name="status_sent">#2E7D32</color>
+    <color name="status_delivered">#1B5E20</color>
+    <color name="status_pending">#F57F17</color>
+    <color name="error_red">#C62828</color>
+    <color name="success_green">#2E7D32</color>
+</resources>
