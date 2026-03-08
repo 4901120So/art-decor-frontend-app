@@ -3,8 +3,9 @@ package com.example.arteydecoraciones.model;
 import com.google.gson.annotations.SerializedName;
 
 public class Producto {
-    // Spring Boot getter getId_Producto() -> Jackson serializa como "id_Producto"
-    @SerializedName("id_Producto")
+    // Jackson 2.18 usa el nombre literal del campo: "Id_Producto" (I mayúscula)
+    // alternate acepta "id_Producto" por si el servidor aún usa getter-based naming
+    @SerializedName(value = "Id_Producto", alternate = {"id_Producto"})
     private int idProducto;
 
     private String name;

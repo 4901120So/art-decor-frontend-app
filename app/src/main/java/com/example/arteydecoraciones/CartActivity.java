@@ -8,6 +8,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import java.io.IOException;
+
 import com.example.arteydecoraciones.adapter.CartAdapter;
 import com.example.arteydecoraciones.api.ApiClient;
 import com.example.arteydecoraciones.databinding.ActivityCartBinding;
@@ -127,8 +129,18 @@ public class CartActivity extends AppCompatActivity {
                             Toast.LENGTH_LONG).show();
                     finish();
                 } else {
-                    Toast.makeText(CartActivity.this,
-                            "Error al crear el pedido: " + response.code(), Toast.LENGTH_SHORT).show();
+                    String errorMsg = "Error al crear el pedido (código " + response.code() + ")";
+                    if (response.errorBody() != null) {
+                        try {
+                            String body = response.errorBody().string();
+                            if (body != null && !body.isEmpty()) errorMsg = body;
+                        } catch (IOException ignored) {}
+                    }
+                    new AlertDialog.Builder(CartActivity.this)
+                            .setTitle("Error al crear pedido")
+                            .setMessage(errorMsg)
+                            .setPositiveButton("OK", null)
+                            .show();
                 }
             }
 
